@@ -15,3 +15,20 @@ C:\Users\Kamil\Documents\GitHub\Ping-SK\obj\Debug\net8.0-windows\refint\Ping pro
 C:\Users\Kamil\Documents\GitHub\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.pdb
 C:\Users\Kamil\Documents\GitHub\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.genruntimeconfig.cache
 C:\Users\Kamil\Documents\GitHub\Ping-SK\obj\Debug\net8.0-windows\ref\Ping projekt SK.dll
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\bin\Debug\net8.0-windows\Ping projekt SK.exe
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\bin\Debug\net8.0-windows\Ping projekt SK.deps.json
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\bin\Debug\net8.0-windows\Ping projekt SK.runtimeconfig.json
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\bin\Debug\net8.0-windows\Ping projekt SK.dll
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\bin\Debug\net8.0-windows\Ping projekt SK.pdb
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping_projekt_SK.PingForm.resources
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.csproj.GenerateResource.cache
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.AssemblyInfoInputs.cache
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.AssemblyInfo.cs
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.csproj.CoreCompileInputs.cache
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.sourcelink.json
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.dll
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\refint\Ping projekt SK.dll
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.pdb
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\Ping projekt SK.genruntimeconfig.cache
+C:\Users\Kacper\OneDrive - Politechnika Śląska\Studia\Projekty\Ping-SK\obj\Debug\net8.0-windows\ref\Ping projekt SK.dll

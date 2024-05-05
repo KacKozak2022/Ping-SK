@@ -1,6 +1,6 @@
 ﻿namespace Ping_projekt_SK
 {
-    partial class Form1
+    partial class PingForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,41 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnPing = new Button();
             label1 = new Label();
-            listBox1 = new ListBox();
-            numericUpDown1 = new NumericUpDown();
+            lstReplies = new ListBox();
+            nudPacketCount = new NumericUpDown();
             label2 = new Label();
             label3 = new Label();
-            numericUpDown2 = new NumericUpDown();
-            textBox1 = new TextBox();
+            nudTTL = new NumericUpDown();
+            txtCurrent = new TextBox();
             label4 = new Label();
-            listBox2 = new ListBox();
+            lstAddresses = new ListBox();
             label5 = new Label();
-            textBox2 = new TextBox();
-            button2 = new Button();
+            txtNew = new TextBox();
+            btnAdd = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPacketCount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudTTL).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // btnPing
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            button1.Location = new Point(241, 6);
-            button1.Margin = new Padding(3, 6, 3, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(66, 25);
-            button1.TabIndex = 0;
-            button1.Text = "Ping!";
-            button1.UseVisualStyleBackColor = true;
+            btnPing.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnPing.Location = new Point(241, 6);
+            btnPing.Margin = new Padding(3, 6, 3, 3);
+            btnPing.Name = "btnPing";
+            btnPing.Size = new Size(66, 25);
+            btnPing.TabIndex = 0;
+            btnPing.Text = "Ping!";
+            btnPing.UseVisualStyleBackColor = true;
+            btnPing.Click += btnPing_Click;
             // 
             // label1
             // 
@@ -73,26 +74,26 @@
             label1.Text = "Adres";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // listBox1
+            // lstReplies
             // 
-            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(3, 43);
-            listBox1.MinimumSize = new Size(288, 214);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(310, 259);
-            listBox1.TabIndex = 2;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            lstReplies.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstReplies.FormattingEnabled = true;
+            lstReplies.ItemHeight = 15;
+            lstReplies.Location = new Point(3, 43);
+            lstReplies.MinimumSize = new Size(288, 214);
+            lstReplies.Name = "lstReplies";
+            lstReplies.Size = new Size(310, 259);
+            lstReplies.TabIndex = 2;
             // 
-            // numericUpDown1
+            // nudPacketCount
             // 
-            numericUpDown1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            numericUpDown1.Location = new Point(85, 3);
-            numericUpDown1.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(90, 23);
-            numericUpDown1.TabIndex = 3;
+            nudPacketCount.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            nudPacketCount.Location = new Point(85, 3);
+            nudPacketCount.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            nudPacketCount.Name = "nudPacketCount";
+            nudPacketCount.Size = new Size(90, 23);
+            nudPacketCount.TabIndex = 3;
+            nudPacketCount.Value = new decimal(new int[] { 4, 0, 0, 0 });
             // 
             // label2
             // 
@@ -114,23 +115,24 @@
             label3.TabIndex = 5;
             label3.Text = "TTL:";
             // 
-            // numericUpDown2
+            // nudTTL
             // 
-            numericUpDown2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            numericUpDown2.Location = new Point(217, 3);
-            numericUpDown2.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(90, 23);
-            numericUpDown2.TabIndex = 6;
+            nudTTL.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            nudTTL.Location = new Point(217, 3);
+            nudTTL.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            nudTTL.Name = "nudTTL";
+            nudTTL.Size = new Size(90, 23);
+            nudTTL.TabIndex = 6;
+            nudTTL.Value = new decimal(new int[] { 56, 0, 0, 0 });
             // 
-            // textBox1
+            // txtCurrent
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(50, 7);
-            textBox1.Margin = new Padding(3, 7, 3, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(185, 23);
-            textBox1.TabIndex = 7;
+            txtCurrent.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtCurrent.Location = new Point(50, 7);
+            txtCurrent.Margin = new Padding(3, 7, 3, 3);
+            txtCurrent.Name = "txtCurrent";
+            txtCurrent.Size = new Size(185, 23);
+            txtCurrent.TabIndex = 7;
             // 
             // label4
             // 
@@ -143,15 +145,16 @@
             label4.Text = "Lista hostów:";
             label4.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // listBox2
+            // lstAddresses
             // 
-            listBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(3, 3);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(202, 214);
-            listBox2.TabIndex = 9;
+            lstAddresses.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lstAddresses.FormattingEnabled = true;
+            lstAddresses.ItemHeight = 15;
+            lstAddresses.Location = new Point(3, 3);
+            lstAddresses.Name = "lstAddresses";
+            lstAddresses.Size = new Size(202, 214);
+            lstAddresses.TabIndex = 9;
+            lstAddresses.Click += lstAddresses_Click;
             // 
             // label5
             // 
@@ -162,24 +165,25 @@
             label5.TabIndex = 10;
             label5.Text = "Nowy host:";
             // 
-            // textBox2
+            // txtNew
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(3, 237);
-            textBox2.Margin = new Padding(3, 8, 3, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(202, 23);
-            textBox2.TabIndex = 11;
+            txtNew.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtNew.Location = new Point(3, 237);
+            txtNew.Margin = new Padding(3, 8, 3, 3);
+            txtNew.Name = "txtNew";
+            txtNew.Size = new Size(202, 23);
+            txtNew.TabIndex = 11;
             // 
-            // button2
+            // btnAdd
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button2.Location = new Point(319, 310);
-            button2.Name = "button2";
-            button2.Size = new Size(208, 33);
-            button2.TabIndex = 12;
-            button2.Text = "Dodaj";
-            button2.UseVisualStyleBackColor = true;
+            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnAdd.Location = new Point(319, 310);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(208, 33);
+            btnAdd.TabIndex = 12;
+            btnAdd.Text = "Dodaj";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -192,8 +196,8 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(label2, 0, 0);
             tableLayoutPanel1.Controls.Add(label3, 2, 0);
-            tableLayoutPanel1.Controls.Add(numericUpDown1, 1, 0);
-            tableLayoutPanel1.Controls.Add(numericUpDown2, 3, 0);
+            tableLayoutPanel1.Controls.Add(nudPacketCount, 1, 0);
+            tableLayoutPanel1.Controls.Add(nudTTL, 3, 0);
             tableLayoutPanel1.Location = new Point(3, 310);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
@@ -209,8 +213,8 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 72F));
             tableLayoutPanel2.Controls.Add(label1, 0, 0);
-            tableLayoutPanel2.Controls.Add(button1, 2, 0);
-            tableLayoutPanel2.Controls.Add(textBox1, 1, 0);
+            tableLayoutPanel2.Controls.Add(btnPing, 2, 0);
+            tableLayoutPanel2.Controls.Add(txtCurrent, 1, 0);
             tableLayoutPanel2.Location = new Point(3, 3);
             tableLayoutPanel2.MaximumSize = new Size(0, 39);
             tableLayoutPanel2.MinimumSize = new Size(290, 39);
@@ -228,9 +232,9 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40.26465F));
             tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 1, 1);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel2, 0, 0);
-            tableLayoutPanel3.Controls.Add(button2, 1, 2);
+            tableLayoutPanel3.Controls.Add(btnAdd, 1, 2);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel1, 0, 2);
-            tableLayoutPanel3.Controls.Add(listBox1, 0, 1);
+            tableLayoutPanel3.Controls.Add(lstReplies, 0, 1);
             tableLayoutPanel3.Controls.Add(label4, 1, 0);
             tableLayoutPanel3.Location = new Point(12, 13);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -246,8 +250,8 @@
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel4.ColumnCount = 1;
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(listBox2, 0, 0);
-            tableLayoutPanel4.Controls.Add(textBox2, 0, 1);
+            tableLayoutPanel4.Controls.Add(lstAddresses, 0, 0);
+            tableLayoutPanel4.Controls.Add(txtNew, 0, 1);
             tableLayoutPanel4.Location = new Point(319, 43);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
@@ -256,7 +260,7 @@
             tableLayoutPanel4.Size = new Size(208, 261);
             tableLayoutPanel4.TabIndex = 16;
             // 
-            // Form1
+            // PingForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -264,10 +268,10 @@
             Controls.Add(tableLayoutPanel3);
             Controls.Add(label5);
             MinimumSize = new Size(570, 410);
-            Name = "Form1";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            Name = "PingForm";
+            Text = "Ping app";
+            ((System.ComponentModel.ISupportInitialize)nudPacketCount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudTTL).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -282,19 +286,19 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnPing;
         private Label label1;
-        private ListBox listBox1;
-        private NumericUpDown numericUpDown1;
+        private ListBox lstReplies;
+        private NumericUpDown nudPacketCount;
         private Label label2;
         private Label label3;
-        private NumericUpDown numericUpDown2;
-        private TextBox textBox1;
+        private NumericUpDown nudTTL;
+        private TextBox txtCurrent;
         private Label label4;
-        private ListBox listBox2;
+        private ListBox lstAddresses;
         private Label label5;
-        private TextBox textBox2;
-        private Button button2;
+        private TextBox txtNew;
+        private Button btnAdd;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
