@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ping projekt SK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22c47828612a707403527f9f56e069ed04aa161e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14386318210bb26d3212e4b79c99646ac5283018")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ping projekt SK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ping projekt SK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
