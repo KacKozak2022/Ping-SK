@@ -59,7 +59,7 @@ namespace Ping_projekt_SK
                         addToReplies("Request timed out");
                 }
 
-                addToReplies($"Packets: Sent={packets} Received={packetsReceived} Lost={packets - packetsReceived} ({((double) packets - packetsReceived)/packets * 100}% loss)");
+                addToReplies($"Packets: Sent={packets} Received={packetsReceived} Lost={packets - packetsReceived} ({((double)packets - packetsReceived) / packets * 100}% loss)");
                 addToReplies("");
             }
             catch (Exception ex)
@@ -77,6 +77,11 @@ namespace Ping_projekt_SK
         private void btnAdd_Click(object sender, EventArgs e)
         {
             lstAddresses.Items.Add(txtNew.Text);
+        }
+
+        private void lstAddresses_DoubleClick(object sender, EventArgs e)
+        {
+            lstAddresses.Items.RemoveAt(lstAddresses.SelectedIndex);
         }
     }
 }

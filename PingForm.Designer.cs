@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             btnPing = new Button();
-            label1 = new Label();
+            lblAddress = new Label();
             lstReplies = new ListBox();
             nudPacketCount = new NumericUpDown();
-            label2 = new Label();
-            label3 = new Label();
+            lblCount = new Label();
+            lblTTL = new Label();
             nudTTL = new NumericUpDown();
             txtCurrent = new TextBox();
-            label4 = new Label();
+            lblAddressList = new Label();
             lstAddresses = new ListBox();
             label5 = new Label();
             txtNew = new TextBox();
@@ -65,14 +65,14 @@
             btnPing.UseVisualStyleBackColor = true;
             btnPing.Click += btnPing_Click;
             // 
-            // label1
+            // lblAddress
             // 
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(41, 39);
-            label1.TabIndex = 1;
-            label1.Text = "Adres";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            lblAddress.Location = new Point(3, 0);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(41, 39);
+            lblAddress.TabIndex = 1;
+            lblAddress.Text = "Adres";
+            lblAddress.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lstReplies
             // 
@@ -82,7 +82,7 @@
             lstReplies.Location = new Point(3, 43);
             lstReplies.MinimumSize = new Size(288, 214);
             lstReplies.Name = "lstReplies";
-            lstReplies.Size = new Size(310, 259);
+            lstReplies.Size = new Size(310, 274);
             lstReplies.TabIndex = 2;
             // 
             // nudPacketCount
@@ -95,25 +95,27 @@
             nudPacketCount.TabIndex = 3;
             nudPacketCount.Value = new decimal(new int[] { 4, 0, 0, 0 });
             // 
-            // label2
+            // lblCount
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Location = new Point(3, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Powtórzenia:";
+            lblCount.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblCount.AutoSize = true;
+            lblCount.Location = new Point(3, 0);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(76, 15);
+            lblCount.TabIndex = 4;
+            lblCount.Text = "Powtórzenia:";
+            lblCount.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblTTL
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.Location = new Point(181, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(30, 15);
-            label3.TabIndex = 5;
-            label3.Text = "TTL:";
+            lblTTL.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblTTL.AutoSize = true;
+            lblTTL.Location = new Point(181, 0);
+            lblTTL.Name = "lblTTL";
+            lblTTL.Size = new Size(30, 15);
+            lblTTL.TabIndex = 5;
+            lblTTL.Text = "TTL:";
+            lblTTL.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // nudTTL
             // 
@@ -134,16 +136,16 @@
             txtCurrent.Size = new Size(185, 23);
             txtCurrent.TabIndex = 7;
             // 
-            // label4
+            // lblAddressList
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(319, 15);
-            label4.Margin = new Padding(3, 15, 3, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(76, 15);
-            label4.TabIndex = 8;
-            label4.Text = "Lista hostów:";
-            label4.TextAlign = ContentAlignment.MiddleLeft;
+            lblAddressList.AutoSize = true;
+            lblAddressList.Location = new Point(319, 15);
+            lblAddressList.Margin = new Padding(3, 15, 3, 0);
+            lblAddressList.Name = "lblAddressList";
+            lblAddressList.Size = new Size(76, 15);
+            lblAddressList.TabIndex = 8;
+            lblAddressList.Text = "Lista hostów:";
+            lblAddressList.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lstAddresses
             // 
@@ -152,9 +154,10 @@
             lstAddresses.ItemHeight = 15;
             lstAddresses.Location = new Point(3, 3);
             lstAddresses.Name = "lstAddresses";
-            lstAddresses.Size = new Size(202, 214);
+            lstAddresses.Size = new Size(202, 229);
             lstAddresses.TabIndex = 9;
             lstAddresses.Click += lstAddresses_Click;
+            lstAddresses.DoubleClick += lstAddresses_DoubleClick;
             // 
             // label5
             // 
@@ -168,7 +171,7 @@
             // txtNew
             // 
             txtNew.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtNew.Location = new Point(3, 237);
+            txtNew.Location = new Point(3, 253);
             txtNew.Margin = new Padding(3, 8, 3, 3);
             txtNew.Name = "txtNew";
             txtNew.Size = new Size(202, 23);
@@ -177,9 +180,9 @@
             // btnAdd
             // 
             btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnAdd.Location = new Point(319, 310);
+            btnAdd.Location = new Point(319, 326);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(208, 33);
+            btnAdd.Size = new Size(208, 29);
             btnAdd.TabIndex = 12;
             btnAdd.Text = "Dodaj";
             btnAdd.UseVisualStyleBackColor = true;
@@ -194,15 +197,15 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 36F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(label2, 0, 0);
-            tableLayoutPanel1.Controls.Add(label3, 2, 0);
+            tableLayoutPanel1.Controls.Add(lblCount, 0, 0);
             tableLayoutPanel1.Controls.Add(nudPacketCount, 1, 0);
             tableLayoutPanel1.Controls.Add(nudTTL, 3, 0);
-            tableLayoutPanel1.Location = new Point(3, 310);
+            tableLayoutPanel1.Controls.Add(lblTTL, 2, 0);
+            tableLayoutPanel1.Location = new Point(3, 326);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 51F));
-            tableLayoutPanel1.Size = new Size(310, 33);
+            tableLayoutPanel1.Size = new Size(310, 29);
             tableLayoutPanel1.TabIndex = 13;
             // 
             // tableLayoutPanel2
@@ -212,7 +215,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 47F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 72F));
-            tableLayoutPanel2.Controls.Add(label1, 0, 0);
+            tableLayoutPanel2.Controls.Add(lblAddress, 0, 0);
             tableLayoutPanel2.Controls.Add(btnPing, 2, 0);
             tableLayoutPanel2.Controls.Add(txtCurrent, 1, 0);
             tableLayoutPanel2.Location = new Point(3, 3);
@@ -235,14 +238,14 @@
             tableLayoutPanel3.Controls.Add(btnAdd, 1, 2);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel1, 0, 2);
             tableLayoutPanel3.Controls.Add(lstReplies, 0, 1);
-            tableLayoutPanel3.Controls.Add(label4, 1, 0);
-            tableLayoutPanel3.Location = new Point(12, 13);
+            tableLayoutPanel3.Controls.Add(lblAddressList, 1, 0);
+            tableLayoutPanel3.Location = new Point(12, 1);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 3;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 39F));
-            tableLayoutPanel3.Size = new Size(530, 346);
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel3.Size = new Size(530, 358);
             tableLayoutPanel3.TabIndex = 15;
             // 
             // tableLayoutPanel4
@@ -257,7 +260,7 @@
             tableLayoutPanel4.RowCount = 2;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100.000008F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
-            tableLayoutPanel4.Size = new Size(208, 261);
+            tableLayoutPanel4.Size = new Size(208, 277);
             tableLayoutPanel4.TabIndex = 16;
             // 
             // PingForm
@@ -287,14 +290,14 @@
         #endregion
 
         private Button btnPing;
-        private Label label1;
+        private Label lblAddress;
         private ListBox lstReplies;
         private NumericUpDown nudPacketCount;
-        private Label label2;
-        private Label label3;
+        private Label lblCount;
+        private Label lblTTL;
         private NumericUpDown nudTTL;
         private TextBox txtCurrent;
-        private Label label4;
+        private Label lblAddressList;
         private ListBox lstAddresses;
         private Label label5;
         private TextBox txtNew;
