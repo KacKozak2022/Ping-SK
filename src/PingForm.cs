@@ -71,7 +71,8 @@ namespace Ping_projekt_SK
 
         private void lstAddresses_Click(object sender, EventArgs e)
         {
-            txtCurrent.Text = lstAddresses.Items[lstAddresses.SelectedIndex].ToString();
+            if (lstAddresses.SelectedIndex != -1)
+                txtCurrent.Text = lstAddresses.Items[lstAddresses.SelectedIndex].ToString();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -81,7 +82,14 @@ namespace Ping_projekt_SK
 
         private void lstAddresses_DoubleClick(object sender, EventArgs e)
         {
-            lstAddresses.Items.RemoveAt(lstAddresses.SelectedIndex);
+            if (lstAddresses.SelectedIndex != -1)
+                lstAddresses.Items.RemoveAt(lstAddresses.SelectedIndex);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            lstReplies.Items.Clear();
+            txtCurrent.Clear();
         }
     }
 }

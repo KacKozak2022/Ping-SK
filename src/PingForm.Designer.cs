@@ -43,6 +43,7 @@
             btnAdd = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
+            btnClear = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)nudPacketCount).BeginInit();
@@ -56,10 +57,10 @@
             // btnPing
             // 
             btnPing.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnPing.Location = new Point(241, 6);
+            btnPing.Location = new Point(147, 6);
             btnPing.Margin = new Padding(3, 6, 3, 3);
             btnPing.Name = "btnPing";
-            btnPing.Size = new Size(66, 25);
+            btnPing.Size = new Size(78, 25);
             btnPing.TabIndex = 0;
             btnPing.Text = "Ping!";
             btnPing.UseVisualStyleBackColor = true;
@@ -69,7 +70,7 @@
             // 
             lblAddress.Location = new Point(3, 0);
             lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(41, 39);
+            lblAddress.Size = new Size(40, 39);
             lblAddress.TabIndex = 1;
             lblAddress.Text = "Adres";
             lblAddress.TextAlign = ContentAlignment.MiddleCenter;
@@ -130,10 +131,10 @@
             // txtCurrent
             // 
             txtCurrent.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtCurrent.Location = new Point(50, 7);
+            txtCurrent.Location = new Point(49, 7);
             txtCurrent.Margin = new Padding(3, 7, 3, 3);
             txtCurrent.Name = "txtCurrent";
-            txtCurrent.Size = new Size(185, 23);
+            txtCurrent.Size = new Size(92, 23);
             txtCurrent.TabIndex = 7;
             // 
             // lblAddressList
@@ -211,21 +212,36 @@
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel2.ColumnCount = 3;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 47F));
+            tableLayoutPanel2.ColumnCount = 4;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 46F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 72F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 84F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 82F));
             tableLayoutPanel2.Controls.Add(lblAddress, 0, 0);
-            tableLayoutPanel2.Controls.Add(btnPing, 2, 0);
             tableLayoutPanel2.Controls.Add(txtCurrent, 1, 0);
+            tableLayoutPanel2.Controls.Add(btnClear, 3, 0);
+            tableLayoutPanel2.Controls.Add(btnPing, 2, 0);
             tableLayoutPanel2.Location = new Point(3, 3);
             tableLayoutPanel2.MaximumSize = new Size(0, 39);
             tableLayoutPanel2.MinimumSize = new Size(290, 39);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.Size = new Size(310, 39);
             tableLayoutPanel2.TabIndex = 14;
+            // 
+            // btnClear
+            // 
+            btnClear.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnClear.Location = new Point(231, 6);
+            btnClear.Margin = new Padding(3, 6, 3, 3);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(76, 25);
+            btnClear.TabIndex = 8;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -306,5 +322,6 @@
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
         private TableLayoutPanel tableLayoutPanel4;
+        private Button btnClear;
     }
 }
